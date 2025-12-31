@@ -14,7 +14,7 @@ USER_HOME="$(eval echo "~$USER_NAME")"
 # =============================
 # CONFIG SOURCE
 # =============================
-RAW_BASE="https://raw.githubusercontent.com/febriananur/dev-config/main"
+RAW_BASE="https://raw.githubusercontent.com/febriananur/server-dev/main"
 
 # =============================
 # OS DETECTION
@@ -149,14 +149,14 @@ if gum confirm "Salin konfigurasi dari GitHub?"; then
     case "$cfg" in
       zsh)
         gum log --level info "Copy .zshrc"
-        curl -fsSL "$RAW_BASE/.zshrc" -o "$USER_HOME/.zshrc"
+        curl -fsSL "$RAW_BASE/config/.zshrc" -o "$USER_HOME/.zshrc"
         chown "$USER_NAME:$USER_NAME" "$USER_HOME/.zshrc"
         ;;
       tmux)
         gum log --level info "Copy tmux config (XDG)"
         TMUX_DIR="$USER_HOME/.config/tmux"
         mkdir -p "$TMUX_DIR"
-        curl -fsSL "$RAW_BASE/tmux.conf" -o "$TMUX_DIR/tmux.conf"
+        curl -fsSL "$RAW_BASE/config/tmux.conf" -o "$TMUX_DIR/tmux.conf"
         chown -R "$USER_NAME:$USER_NAME" "$TMUX_DIR"
         ;;
     esac

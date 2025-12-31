@@ -131,13 +131,14 @@ source_if_exists /usr/share/zsh-fzf-tab/fzf-tab.plugin.zsh
 source_if_exists /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source_if_exists /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# syntax highlighting (HARUS PALING BAWAH)
+# history substring search  
+source_if_exists /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source_if_exists /usr/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+# syntax highlighting (WAJIB PALING TERAKHIR) 
 source_if_exists /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source_if_exists /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# history substring search
-source_if_exists /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-source_if_exists /usr/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 
 bindkey '^[[A' history-substring-search-up
